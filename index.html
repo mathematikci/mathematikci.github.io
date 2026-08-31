@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="iPad ekranınızı aynı Wi-Fi ağındaki bir tarayıcıya güvenle yansıtın.">
+  <title>Ayna — Yerel ekran paylaşımı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ayna ana sayfa"><span class="brand-mark">A</span><span>Ayna</span></a>
+    <div class="network-pill"><span class="dot"></span><span id="networkText">Bağlantıya hazır</span></div>
+  </header>
+
+  <main>
+    <section class="receiver" aria-labelledby="receiver-title">
+      <div class="copy">
+        <p class="eyebrow">AYNI WI-FI · UÇTAN UCA ŞİFRELİ</p>
+        <h1 id="receiver-title">iPad ekranın,<br><span>burada canlı.</span></h1>
+        <p class="lede">iPad’de Ayna yayınını başlat, eşleştirme kodunu gir ve ekranını bu tarayıcıda gecikmesiz izle.</p>
+
+        <form id="pairForm" class="pair-card">
+          <label for="pairCode">Eşleştirme kodu</label>
+          <div class="code-row">
+            <input id="pairCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000 000" aria-describedby="pairHelp">
+            <button type="submit">Bağlan <span aria-hidden="true">→</span></button>
+          </div>
+          <p id="pairHelp" class="help">Kod, iPad’deki Ayna yardımcı uygulamasında görünür.</p>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="trust-row">
+          <span>✓ İnternete görüntü yüklenmez</span>
+          <span>✓ Aynı ağda çalışır</span>
+        </div>
+      </div>
+
+      <div class="stage" aria-label="Ekran alıcısı önizlemesi">
+        <div class="stage-head"><span><i></i> Alıcı bekliyor</span><button id="fullscreenBtn" type="button" aria-label="Tam ekrana geç">⛶</button></div>
+        <div class="screen">
+          <div class="signal"><span></span><span></span><span></span></div>
+          <div class="screen-icon">⌁</div>
+          <strong>Yayın bekleniyor</strong>
+          <small>iPad’inizden bağlantıyı başlatın</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" aria-labelledby="how-title">
+      <div><p class="eyebrow">3 KOLAY ADIM</p><h2 id="how-title">Kablo yok.<br>Hesap yok.</h2></div>
+      <ol>
+        <li><b>01</b><div><strong>Aynı ağa bağlan</strong><p>iPad ve bu cihaz aynı Wi-Fi ağında olmalı.</p></div></li>
+        <li><b>02</b><div><strong>iPad’de yayını aç</strong><p>Denetim Merkezi’nde Ekran Kaydı’na basılı tutup Ayna’yı seç.</p></div></li>
+        <li><b>03</b><div><strong>Kodu gir</strong><p>Altı haneli kodla eşleştir, ardından tam ekrana geç.</p></div></li>
+      </ol>
+    </section>
+
+    <aside class="notice">
+      <span>i</span><p><strong>iOS hakkında:</strong> Safari veya Chrome, başka uygulamaların ekranını tek başına yakalayamaz. Canlı aktarım için ReplayKit kullanan Ayna iPad yardımcı uygulaması gerekir.</p>
+    </aside>
+  </main>
+
+  <footer><span>© 2026 Ayna</span><span>Yerel. Özel. Hızlı.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
